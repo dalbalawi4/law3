@@ -1,54 +1,52 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>المحامي عبدالرحمن البلوي | للمحاماة والاستشارات القانونية</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
-    body {
-      font-family: 'Tajawal', sans-serif;
-    }
-    .hero-section {
-      background-color: #1e3a8a;
-    background-image: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.9)), url(\'/justice_scale.png\');
-      background-size: cover;
-      background-position: center;
-    }
-  </style>
-</head>
-<body class="bg-gray-50">
-  <!-- Header -->
-  <header class="bg-white shadow-md">
-    <div class="container mx-auto px-4 py-3">
-      <div class="flex justify-between items-center">
-        <div class="flex items-center">
-          <div class="text-3xl text-blue-900 ml-2">
-            <i class="fas fa-balance-scale"></i>
-          </div>
-          <div>
-            <h1 class="text-xl font-bold text-blue-900">المحامي عبدالرحمن منصور البلوي</h1>
-            <p class="text-sm text-gray-600"> للمحاماة و الاستشارات قانونية وأعمال التوثيق</p>
-          </div>
+<!-- Header -->
+<header class="bg-white shadow-md">
+  <div class="container mx-auto px-4 py-3">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center">
+        <div class="text-3xl text-blue-900 ml-2">
+          <i class="fas fa-balance-scale"></i>
         </div>
-        
-        <nav class="hidden md:flex space-x-8 space-x-reverse">
-          <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">الرئيسية</a>
-          <a href="#about" class="text-gray-600 hover:text-blue-700 font-medium">نبذة عني</a>
-          <a href="#services" class="text-gray-600 hover:text-blue-700 font-medium">الخدمات</a>
-          <a href="#contact" class="text-gray-600 hover:text-blue-700 font-medium">تواصل معنا</a>
-        </nav>
-        
-        <div class="flex items-center space-x-4 space-x-reverse">
-          <button class="md:hidden text-gray-600 focus:outline-none">
-            <i class="fas fa-bars text-xl"></i>
-          </button>
+        <div>
+          <h1 class="text-xl font-bold text-blue-900">المحامي عبدالرحمن منصور البلوي</h1>
+          <p class="text-sm text-gray-600">للمحاماة والاستشارات القانونية وأعمال التوثيق</p>
         </div>
       </div>
+
+      <!-- القائمة العادية للجوال مخفية على md -->
+      <nav class="hidden md:flex space-x-8 space-x-reverse">
+        <a href="#" class="text-blue-900 hover:text-blue-700 font-medium">الرئيسية</a>
+        <a href="#about" class="text-gray-600 hover:text-blue-700 font-medium">نبذة عني</a>
+        <a href="#services" class="text-gray-600 hover:text-blue-700 font-medium">الخدمات</a>
+        <a href="#contact" class="text-gray-600 hover:text-blue-700 font-medium">تواصل معنا</a>
+      </nav>
+
+      <!-- زر القائمة للجوال -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-gray-600 focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
     </div>
-  </header>
+
+    <!-- القائمة المنسدلة للجوال -->
+    <div id="mobile-menu" class="hidden md:hidden mt-2">
+      <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">الرئيسية</a>
+      <a href="#about" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">نبذة عني</a>
+      <a href="#services" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">الخدمات</a>
+      <a href="#contact" class="block py-2 px-4 text-gray-700 hover:bg-gray-100">تواصل معنا</a>
+    </div>
+  </div>
+</header>
+
+<!-- JS لتشغيل القائمة المنسدلة -->
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
 
   <!-- Hero Section -->
   <section class="hero-section text-white py-20">
